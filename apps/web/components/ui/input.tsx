@@ -7,15 +7,27 @@ function Input({
   label,
   className,
   type,
+  labelClassName,
+  inputClassName,
   ...props
 }: React.ComponentProps<"input"> & {
   label: string;
+  labelClassName?: string;
+  inputClassName?: string;
 }) {
   return (
-    <div className="bg-input flex h-14 flex-col items-start px-4 py-2">
+    <div
+      className={cn(
+        "bg-input flex h-14 flex-col items-start px-4 py-2",
+        className,
+      )}
+    >
       <label
         htmlFor={name}
-        className="text-muted-foreground text-[0.75rem] leading-4"
+        className={cn(
+          "text-muted-foreground text-[0.75rem] leading-4",
+          labelClassName,
+        )}
       >
         {label}
       </label>
@@ -23,7 +35,10 @@ function Input({
         id={name}
         type={type}
         data-slot="input"
-        className="h-6 border-none bg-transparent text-base outline-none"
+        className={cn(
+          "h-6 border-none bg-transparent text-base outline-none",
+          inputClassName,
+        )}
         {...props}
       />
     </div>

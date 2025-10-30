@@ -4,6 +4,6 @@ import { IsEmail } from 'class-validator';
 @InputType()
 export class CreateReferralLinkInput {
   @Field()
-  @IsEmail()
+  @IsEmail({}, { message: 'Please enter a valid email address' })
   ownerEmail: string;
 }
