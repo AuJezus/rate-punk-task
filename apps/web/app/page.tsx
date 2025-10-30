@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { GET_REFERRAL_LINKS } from "@/data/referral-link./gql";
 import { fetchGQLMapped } from "@/lib/gql";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 
 export default async function Home() {
   const data = await fetchGQLMapped(GET_REFERRAL_LINKS);

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FacebookIcon, InstagramIcon, YoutubeIcon } from "lucide-react";
 import { Typography } from "./ui/typography";
 import AppQrCode from "@/public/app-qr-code.svg";
@@ -9,6 +8,7 @@ import TrustpilotLogo from "@/public/logo/trustpilot-logo.svg";
 import TrustpilotReview from "@/public/trustpilot-review.svg";
 import TrustpilotStars from "@/public/trustpilot-stars.svg";
 import { cn } from "@/lib/utils";
+import Link from "@/components/ui/link";
 
 const SITEMAP = [
   { href: "/flight-deals", label: "Flight Deals" },
@@ -45,7 +45,10 @@ const CONTACT_US = [
 ];
 
 const EXTENSIONS = [
-  { href: "/chrome-extension", label: "Chrome Extension" },
+  {
+    href: "https://chromewebstore.google.com/detail/ratepunk-hotel-booking-de/gdaioanblcnghddimngklkhgcbomfdck?utm_source=ratepunk%5D",
+    label: "Chrome Extension",
+  },
   { href: "/safari-extension", label: "Safari Extension" },
   { href: "/firefox-extension", label: "Firefox Extension" },
 ];
@@ -53,7 +56,7 @@ const EXTENSIONS = [
 const APP_DOWNLOADS = [
   { href: undefined, svg: AppQrCode },
   {
-    href: "/download-app-store",
+    href: "https://apps.apple.com/app/ratepunk/id1607823726%5D",
     svg: DownloadAppStoreIcon,
     showOnMobile: true,
   },
